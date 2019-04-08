@@ -1,0 +1,40 @@
+font.title{
+    color:pink;
+    background-color:mintcream;
+    border-bottom:skyblue 2px solid;
+    border-right:skyblue 2px solid;
+    font-size:80px;
+    font-family: "Times New Roman", Times, serif;
+}
+font.clock{
+    color:palegoldenrod;
+}
+.button.start{
+    color:lightcyan;
+    border-bottom:lightblue 2px solid;\
+}
+.button:hover {
+    color: lightcyan;
+    width: 100;
+    height: 50;
+    background-color: pink;
+}
+img.fixed.clock {
+    position:fixed;
+    left:100%;
+    top:85%;
+    width:200px;
+    height:200px;
+}
+img.fixed.tree {
+    position:fixed;
+    left:0px;
+    top:0px;
+}
+#clock { position:relative;width:300px;height:300px; }
+#clock img { position:absolute;top:85%;left:100%; }
+#digital { width:300px; height:20px; text-align:right; }
+function myFunction() {
+    var element = document.getElementById("myDIV");
+    element.classList.toggle('mystyle');
+}

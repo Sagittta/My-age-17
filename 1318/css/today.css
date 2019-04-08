@@ -1,0 +1,7 @@
+.div {
+    position: fixed;
+    left: 70;
+}
+.div:hover {
+    width:100;
+}

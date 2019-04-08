@@ -1,0 +1,42 @@
+#output {
+    width: 100px;
+    height: 70px;
+    position: fixed;
+    left: 700px;
+    top: 200px;
+    background-color: #ccc;
+    border: 1px solid #999;
+  }
+  img.fixed.one {
+    position:fixed;
+    left: 550px;
+    top: 300px;
+    animation: target_image 2s; 
+    animation-iteration-count: infinite;
+    transform-origin: 25% 100%;
+}
+img.fixed.two {
+    position:fixed;
+    right: 600px;
+    top: 300px;
+    animation: target_image 2s; 
+    animation-iteration-count: infinite;
+    transform-origin: 25% 100%;
+}
+    
+@keyframes target_image {    
+    0% { transform: rotate(-10deg); }
+    50% { transform: rotate(25deg) }
+    100% { transform: rotate(-10deg); }
+}
+
+.div:hover {
+    width: 170px;
+}
+.div2 {
+    position: fixed;
+    left: 190;
+}
+.div2:hover {
+    width:100;
+}

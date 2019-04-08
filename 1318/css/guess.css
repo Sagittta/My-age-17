@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Hi+Melody&subset=korean');
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+font {
+    color: pink;
+    font-size: 35px;
+    font-family: 'Hi Melody', cursive;
+}
+font.baam {
+    color: lightskyblue;
+    font-size: 45px;
+    font-family: 'Lobster', cursive;
+}
+.btn-group .button {
+    background-color: rgb(255, 199, 199); /* Green */
+    border: none;
+    color: white;
+    padding: 8px 8px;
+    margin: 0%;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    display: block;
+}
+
+.btn-group .button:hover {
+    background-color: #fdff86;
+}
+.div {
+    position: fixed;
+    left: 70;
+}
+.div:hover {
+    width:100;
+}

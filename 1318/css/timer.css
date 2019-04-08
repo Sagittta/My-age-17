@@ -1,0 +1,14 @@
+.div {
+    position: fixed;
+    left: 70;
+}
+.div:hover {
+    width:100;
+}
+.div2 {
+    position: fixed;
+    left: 190;
+}
+.div2:hover {
+    width:100;
+}

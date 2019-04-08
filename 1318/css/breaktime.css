@@ -1,0 +1,57 @@
+.div {
+    position: fixed;
+    left: 70;
+}
+.div:hover {
+    width:100;
+}
+img.div1 {
+    position: fixed;
+    top: 30%;
+    left: 200;
+}
+.div1:hover {
+    width: 300;
+    cursor:pointer;
+}
+font.div1 {
+    color: peachpuff;
+    position: fixed;
+    top: 60%;
+    left: 250;
+    font-weight: bold;
+}
+
+img.div2 {
+    position: fixed;
+    top: 30%;
+    left: 500;
+}
+.div2:hover {
+    width: 300;
+    cursor:pointer;
+}
+font.div2 {
+    color: peachpuff;
+    position: fixed;
+    top: 60%;
+    left: 550;
+    font-weight: bold;
+}
+
+img.div3 {
+    position: fixed;
+    top: 30%;
+    left: 800;
+}
+.div3:hover {
+    width: 300;
+    cursor:pointer;
+}
+font.div3 {
+    color: peachpuff;
+    position: fixed;
+    top: 60%;
+    left: 850;
+    font-weight: bold;
+}

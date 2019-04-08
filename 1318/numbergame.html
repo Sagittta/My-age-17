@@ -1,0 +1,39 @@
+<HTML>
+        <HEAD>
+            <TITLE>숫자 맞추기</TITLE>
+        <script src="js/number.js"></script>
+        <link rel="stylesheet" href="css/numbergame.css">
+        <meta charset="UTF-8">
+        </head>
+        
+        <body onLoad="NewGame();">
+            <img src="image/heart.png" class="div" width=70 onclick="location.href='right3.html'">
+            <img src="image/cabin.png" class="div2" width=70 onclick="location.href='breaktime.html'">
+            <embed src="audio/breaktimeaudio.mp3" autostart="true" loop="true" hidden="true">
+            <center>
+        
+            <script language="JavaScript">document.write(MinNum);</SCRIPT> 부터
+            <script language="JavaScript">document.write(MaxNum);</SCRIPT> 까지 숫자중 생각나는 숫자를 아래 <B>추측 숫자 항목</B>에 입력하세요..<BR>
+        
+        <form onSubmit="GuessNum(); return false">
+        <B>추측 숫자 :</B>
+            <input type="text" name="guess" size="3">
+            <input type="button" value=" 이걸까? " onClick = "GuessNum();">
+        </form>
+        <br>
+        
+        <form>
+            <table>
+            <tr>
+                <td>메세지 :</td>
+                <td><input type="text" name="result" size="25"></td>
+            </tr>
+            <tr>
+                <td>시도 횟수 :</td>
+                <td><input type="text" name="guesses" size="3"></td>
+            </tr>
+            </table>
+        </form>
+        </center>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+.div {
+    position: fixed;
+    left: 70;
+}
+.div:hover {
+    width:100;
+}
+.div2 {
+    position: fixed;
+    left: 200;
+}
+.div2:hover {
+    width: 250;
+}
+.div3 {
+    position: fixed;
+    left: 550;
+}
+.div3:hover {
+    width: 250;
+}
+.div4 {
+    position: fixed;
+    left: 900;
+}
+.div4:hover {
+    width: 250;
+}
