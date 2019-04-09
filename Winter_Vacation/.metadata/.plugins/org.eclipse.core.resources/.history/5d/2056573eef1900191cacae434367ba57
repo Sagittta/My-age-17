@@ -1,0 +1,7 @@
+package emirim.handler;
+
+import java.awt.event.KeyAdapter;
+
+public class KakaoHandler extends KeyAdapter {
+
+}

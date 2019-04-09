@@ -1,0 +1,36 @@
+package emirim.handler;
+
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
+
+import javax.swing.JLabel;
+
+import emirim.view.KakaoView;
+
+public class KakaoHandler extends KeyAdapter {
+	private JLabel lbl;
+	private KakaoView view;
+	private int[] obstacleX, obstacleY, treasureX, treasureY;
+	private int[] obstartX, obendX, obstartY, obendY;
+	private int[] trstartX, trendX, trstartY, trendY;
+	private JLabel lblScore;
+	private boolean prev_status_hit = false;
+	
+	public KakaoHandler(KakaoView view) {
+		super();
+		this.view = view;
+		this.lbl = view.getLbl();
+		this.lblScore = view.getLblScore();
+		this.obstacleX = view.getObstacleX();
+		this.obstacleY = view.getObstacleY();
+		this.treasureX = view.getTreasureX();
+		this.treasureY = view.getTreasureY()
+	}
+
+
+
+	@Override
+	public void keyPressed(KeyEvent e) {
+		
+	}
+}

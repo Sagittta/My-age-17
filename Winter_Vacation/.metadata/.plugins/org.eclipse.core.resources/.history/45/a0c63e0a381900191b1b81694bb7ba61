@@ -1,0 +1,7 @@
+package emirim.view;
+
+import javax.swing.JFrame;
+
+public class KakaoView extends JFrame {
+
+}

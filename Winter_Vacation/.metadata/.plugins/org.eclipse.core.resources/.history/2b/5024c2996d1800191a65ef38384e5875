@@ -1,0 +1,16 @@
+package emirim.thread;
+
+public class SlideShowThread extends Thread {
+	private SlideShowView ssv;
+	
+	public SlideShowThread() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	@Override
+	public void run() {
+		while (true) {
+			
+		}
+	}
+}

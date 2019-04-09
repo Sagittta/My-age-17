@@ -1,0 +1,23 @@
+package emirim.controller;
+
+import emirim.audios.BGMusic;
+import emirim.audios.ObstacleAudio;
+import emirim.audios.TreasureAudio;
+import emirim.handler.KakaoHandler;
+import emirim.thread.KakaoThread;
+import emirim.view.KakaoView;
+
+public class KakaoController {
+
+	public static void main(String[] args) {
+		KakaoView view = new KakaoView();
+		KakaoHandler l = new KakaoHandler(view);
+		view.addKeyListener(l);
+		new BGMusic();
+		new ObstacleAudio();
+		new TreasureAudio();
+		KakaoThread kt = new KakaoThread(view);
+		kt.start();
+	}
+
+}

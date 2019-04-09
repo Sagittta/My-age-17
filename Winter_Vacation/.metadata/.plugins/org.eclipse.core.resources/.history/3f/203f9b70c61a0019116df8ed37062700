@@ -1,0 +1,45 @@
+package emirim.view;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import emirim.domain.ProductVO;
+import emirim.domain.UserDTO;
+
+public class VendingMachineView {
+//	전체 제품을 화면에 출력
+	public void displayProducts(ArrayList<ProductVO> productList) {
+		System.out.println("=========================");
+		for (ProductVO productVO : productList) {
+			System.out.printf("제품번호: %d :: [[ %s ]] (가격: %d)\n", productVO.getProductID(), productVO.getProductName(), productVO.getPrice());
+			System.out.println();
+		}
+		System.out.println("=========================");
+		System.out.println();
+	}
+//	사용자가 입력할 수 있는 화면
+	public void inputUserInfo(UserDTO user, Scanner s1) {
+		System.out.print("* 제품번호 선택 : ");
+		user.setProductID(s1.nextInt());
+		System.out.println("* 돈 투입 : ");
+		user.setInsertMoney(s1.nextInt());
+	}
+//	선택한 제품에 대한 결과를 출력
+	public void displayResult(ProductVO product, UserDTO user) {
+		int stockNum = product.getStockNum();
+		System.out.println("=========================");
+		System.out.println();
+		if (stockNum > 0) {
+			if (user.getInsertMoney() >= product.getPrice()) {
+				System.out.println();
+			} else {
+				
+			}
+		} else {
+			System.out.println("!! 재고가 부족합니다.");
+			System.out.println("!! 투입금액 %d원이 반환되었습니다.", user.getInsertMoney());
+		}
+		System.out.println();
+		System.out.println("=========================");
+	}
+}

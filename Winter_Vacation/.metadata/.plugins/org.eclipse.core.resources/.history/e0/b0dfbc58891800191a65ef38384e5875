@@ -1,0 +1,13 @@
+package emirim.thread;
+
+import emirim.view.AnimationView;
+
+public class AnimationThread extends Thread {
+	
+	private AnimationView av;
+	
+	@Override
+	public void run() {
+		
+	}
+}

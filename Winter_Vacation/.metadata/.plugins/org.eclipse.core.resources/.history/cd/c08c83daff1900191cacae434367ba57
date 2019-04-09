@@ -1,0 +1,18 @@
+package emirim.controller;
+
+import emirim.handler.KakaoHandler;
+import emirim.thread.KakaoThread;
+import emirim.view.KakaoView;
+
+public class KakaoController {
+
+	public static void main(String[] args) {
+		KakaoView view = new KakaoView();
+		KakaoHandler l = new KakaoHandler(view);
+		view.addKeyListener(l);
+		
+		KakaoThread kt = new KakaoThread(view);
+		kt.start();
+	}
+
+}

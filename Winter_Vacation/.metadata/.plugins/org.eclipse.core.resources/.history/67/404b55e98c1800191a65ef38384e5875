@@ -1,0 +1,11 @@
+package emirim.controller;
+
+import emirim.view.AnimationView;
+
+public class AnimationController {
+
+	public static void main(String[] args) {
+		AnimationView av = new AnimationView();
+	}
+
+}

@@ -1,0 +1,44 @@
+package emirim.thread;
+
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+
+import emirim.view.AnimationView;
+
+public class AnimationThread extends Thread {
+	
+	private AnimationView av;
+	private JLabel lblDy;
+	private boolean rightFlag;
+	
+	public AnimationThread(AnimationView av) {
+		super();
+		this.av = av;
+		this.lblDy = av.getLblDy();
+	}
+
+	@Override
+	public void run() {
+		String filename = null;
+		ImageIcon icon = null;
+		while (true) {
+			if (lblDy.getX() == 520)
+				rightFlag = false;
+			else if (lblDy.getX() == 0)
+				rightFlag = true;
+			
+			if (rightFlag) {//오른쪽방향
+				lblDy.setLocation(lblDy.getX() + 10, lblDy.getY());
+				filename = "imgs/dy_right.png";
+				icon = new ImageIcon(filename);
+				lblDy.setIcon(icon);
+			} else {	//왼쪽 방향
+				lblDy.setLocation(lblDy.getX() - 10, lblDy.getY());
+				filename = "imgs/dy_left.png";
+				icon = new ImageIcon(filename);
+				lblDy.setIcon(icon);
+			}
+			sleep(200);
+		}
+	}
+}

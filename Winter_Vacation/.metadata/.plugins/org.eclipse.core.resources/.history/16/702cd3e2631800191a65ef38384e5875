@@ -1,0 +1,15 @@
+package emirim.threadtest;
+
+public class ThreadController {
+
+	public static void main(String[] args) {
+		for (int i = 0; i < 100; i++) {
+//			1번 방법(extends Thread)
+//			New Born 상태(새로 태어난 상태)
+			Thread1 t1 = new Thread1();
+//			Runnable 상태(실행 가능한 상태)
+			t1.start();
+		}
+	}
+
+}

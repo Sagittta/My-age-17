@@ -1,0 +1,13 @@
+package emirim.controller;
+
+import emirim.thread.AnimationThread;
+import emirim.view.AnimationView;
+
+public class AnimationController {
+
+	public static void main(String[] args) {
+		AnimationView av = new AnimationView();
+		AnimationThread at = new AnimationThread(av);
+	}
+
+}

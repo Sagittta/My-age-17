@@ -1,0 +1,16 @@
+package emirim.handler;
+
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
+
+public class KakaoHandler extends KeyAdapter {
+	private JLabel lbl;
+	private KakaoView view;
+	private int[] obstacleX, obstacleY, treasureX, treasureY;
+	private int[] obstartX, obendX;
+	
+	@Override
+	public void keyPressed(KeyEvent e) {
+		
+	}
+}

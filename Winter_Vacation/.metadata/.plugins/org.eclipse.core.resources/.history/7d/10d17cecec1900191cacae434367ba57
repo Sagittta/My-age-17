@@ -1,0 +1,5 @@
+package emirim.thread;
+
+public class KakaoThread extends Thread {
+
+}

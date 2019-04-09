@@ -1,0 +1,24 @@
+package emirim.thread;
+
+import javax.swing.JLabel;
+
+import emirim.view.AnimationView;
+
+public class AnimationThread extends Thread {
+	
+	private AnimationView av;
+	private JLabel lblWbb;
+	
+	public AnimationThread(AnimationView av) {
+		super();
+		this.av = av;
+		this.lblWbb = av.getLblWbb();
+	}
+
+	@Override
+	public void run() {
+		while (true) {
+			lblWbb.setLocation(lblWbb.getX() + 10, y);
+		}
+	}
+}

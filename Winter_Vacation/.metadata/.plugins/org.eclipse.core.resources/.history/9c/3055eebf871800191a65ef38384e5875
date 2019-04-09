@@ -1,0 +1,10 @@
+package emirim.controller;
+
+public class AnimationController {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,68 @@
+package emirim.thread;
+
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+
+import emirim.view.AnimationView;
+
+public class AnimationThread extends Thread {
+	private AnimationView av;
+	private JLabel lblDy;
+	private boolean rightFlag;
+	private int sleepTime = 3500;
+	private boolean stopFlag = false;	//stop일 때 true stop이 아닐 때 false
+	
+	public AnimationThread(AnimationView av) {
+		super();
+		this.av = av;
+		this.lblDy = av.getLblDy();
+	}
+	
+	public void setSleepTime(int sleepTime) {
+		this.sleepTime = sleepTime;
+	}
+
+	public void setStopFlag(boolean stopFlag) {
+		this.stopFlag = stopFlag;
+	}
+
+	@Override
+	public void run() {
+		String filename = null;
+		ImageIcon icon = null;
+		while (true) {
+			synchronized (this) {
+				if (stopFlag) {		//stopFlag == true면 스레드가 쉬고 있게 한다.
+					try {
+						wait();
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+				} else {
+					if (lblDy.getX() == 520)
+						rightFlag = false;
+					else if (lblDy.getX() == 0)
+						rightFlag = true;
+					
+					if (rightFlag) {//오른쪽방향
+						lblDy.setLocation(lblDy.getX() + 10, lblDy.getY());
+						filename = "imgs/Ha_right.gif";
+						icon = new ImageIcon(filename);
+						lblDy.setIcon(icon);
+					} else {	//왼쪽 방향
+						lblDy.setLocation(lblDy.getX() - 10, lblDy.getY());
+						filename = "imgs/Ha_left.gif";
+						icon = new ImageIcon(filename);
+						lblDy.setIcon(icon);
+					}
+					try {
+						sleep(sleepTime);
+					} catch (InterruptedException e) {
+						e.printStackTrace();
+					}
+				}	//else
+			}	//end synchronized
+		}	//while
+	}	//run
+	
+}

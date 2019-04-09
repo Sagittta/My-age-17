@@ -1,0 +1,18 @@
+package emirim.controller;
+
+import java.util.ArrayList;
+
+import emirim.persistence.VendingMachineDAO;
+
+public class VendingMachineController {
+
+	public static void main(String[] args) {
+		String[] productNames = {"마우틴듀", "미란다", "포카리스웨트", "웰치스", "사이다"};
+		int[] productPrices = {1500, 1200, 900, 1300, 700};
+		VendingMachineDAO dao = new VendingMachineDAO();
+		
+		for (int i = 0; i < productPrices.length; i++) {
+		}
+	}
+
+}

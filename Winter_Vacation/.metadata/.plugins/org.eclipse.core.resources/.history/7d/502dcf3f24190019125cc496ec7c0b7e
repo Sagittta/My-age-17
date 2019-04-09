@@ -1,0 +1,31 @@
+package emirim.handler;
+
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import emirim.thread.AnimationThread;
+import emirim.view.AnimationView;
+
+public class BtnAnimationHandler implements ActionListener {
+	private AnimationView av;
+	private AnimationThread at;
+
+	public BtnAnimationHandler(AnimationView av, AnimationThread at) {
+		super();
+		this.av = av;
+		this.at = at;
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		Object eo = e.getSource();
+		if (eo == av.getBtnFast()) {
+			at.setSleepTime(100);
+		} else if (eo == av.getBtnMiddle()) {
+			at.setSleepTime(600);
+		} else {
+			at.setSleepTime(1500);
+		}
+	}
+
+}

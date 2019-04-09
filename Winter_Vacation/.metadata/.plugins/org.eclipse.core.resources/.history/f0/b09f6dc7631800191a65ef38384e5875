@@ -1,0 +1,11 @@
+package emirim.threadtest;
+
+public class ThreadController {
+
+	public static void main(String[] args) {
+		for (int i = 0; i < 100; i++) {
+			System.out.println("Thread 없이 반복문 실행 : " + i);
+		}
+	}
+
+}

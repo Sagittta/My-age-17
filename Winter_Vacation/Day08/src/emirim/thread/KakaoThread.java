@@ -1,0 +1,33 @@
+package emirim.thread;
+
+import javax.swing.ImageIcon;
+import javax.swing.JLabel;
+
+import emirim.view.KakaoView;
+
+public class KakaoThread extends Thread {
+	private KakaoView view;
+	private JLabel lblBG;
+	
+	public KakaoThread(KakaoView view) {
+		this.view = view;
+		lblBG = view.getLblBG();
+	}
+
+	@Override
+	public void run() {
+		int i = 0;
+		while (true) {
+			i++;
+			if (i == 4)
+				i = 1;
+			try {
+				ImageIcon icon = new ImageIcon("imgs/bg/BGI" + i + ".png");
+				lblBG.setIcon(icon);
+				sleep(1000);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+		}
+	}
+}

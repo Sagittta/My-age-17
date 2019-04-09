@@ -1,0 +1,13 @@
+package emirim.view;
+
+import javax.swing.JFrame;
+
+public class SlideShowView extends JFrame {
+	
+	public SlideShowView() {
+		setTitle("Image Slide Show");
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		setBounds(100, 120, 372, 402);
+		setVisible(true);
+	}
+}

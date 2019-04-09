@@ -1,0 +1,28 @@
+package emirim.view;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+import emirim.domain.ProductVO;
+import emirim.domain.UserDTO;
+
+public class VendingMachineView {
+//	전체 제품을 화면에 출력
+	public void displayProducts(ArrayList<ProductVO> productList) {
+		System.out.println("=========================");
+		for (ProductVO productVO : productList) {
+			System.out.printf("제품번호: %d :: [[ %s ]] (가격: %d)\n", productVO.getProductID(), productVO.getProductName(), productVO.getPrice());
+			System.out.println();
+		}
+		System.out.println("=========================");
+		System.out.println();
+	}
+//	사용자가 입력할 수 있는 화면
+	public void inputUserInfo(UserDTO user, Scanner s1) {
+		
+	}
+//	선택한 제품에 대한 결과를 출력
+	public void displayResult(ProductVO product, UserDTO user) {
+		
+	}
+}
